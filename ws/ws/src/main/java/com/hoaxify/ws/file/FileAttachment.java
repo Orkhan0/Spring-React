@@ -18,7 +18,7 @@ import lombok.Data;
 public class FileAttachment {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)// private table sequence
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
 	private String name;
@@ -28,6 +28,6 @@ public class FileAttachment {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date date;
 
-	@OneToOne//1. One -> FileAttachment //2. One -> Hoax
+	@OneToOne
 	private Hoax hoax;
 }
